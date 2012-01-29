@@ -1,0 +1,37 @@
+<script type="text/javascript">
+dojo.require("dojox.charting.widget.Chart2D");
+//Class to create a legend for our chart
+dojo.require("dojox.charting.widget.Legend");
+//A theme for our chart
+dojo.require("dojox.charting.themes.PlotKit.green");
+
+
+
+var pieData = [{ "x": "1", "y": "9420" }, { "x":"2", "y":"10126" }, { "x": "3", "y": "9803" },
+               { "x": "4", "y": "15965" }, 
+               { "x": "5", "y": "17290" }, { "x": "6", "y": "15667" }, { "x": "7", "y": "17762" }];
+
+
+</script>
+
+<body>
+
+<div dojoType="dojox.charting.widget.Chart2D" id="viewsChart" theme="dojox.charting.themes.PlotKit.green" style="width: 550px; height: 550px;">
+ 
+    <!-- add the plot -->
+    <div class="plot" name="default" type="Pie" radius="200" fontColor="black" labelOffset="-20"></div>
+ 
+    <!-- pieData is the data source -->
+    <div class="series" name="January" array="pieData"></div>
+ 
+    <!-- tooltips! -->
+    <div class="action" type="Tooltip"></div>
+ 
+    <!-- slice animation! -->
+    <div class="action" type="MoveSlice" shift="2"></div>
+ 
+</div>
+
+
+
+</body>

@@ -1,0 +1,1 @@
+dependencies = ({prefixes:[["dijit", "../dijit"], ["dojox", "../dojox"]], layers:[]})

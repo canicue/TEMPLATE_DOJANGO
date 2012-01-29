@@ -1,0 +1,49 @@
+<HEAD>
+</HEAD>
+<script LANGUAGE=javascript>
+function exportToXL(eSrc) {
+var oExcel;
+var oExcelSheet;
+var oWkBooks;
+var cols;
+oExcel = new ActiveXObject('Excel.Application');
+oWkBooks = oExcel.Workbooks.Add;
+oExcelSheet = oWkBooks.Worksheets(1);
+oExcelSheet.Activate();
+if (eSrc.tagName != 'TABLE') {
+alert('No ha sido posible exportar la tabla a excell');
+return false;
+}
+cols = Math.ceil(eSrc.cells.length / eSrc.rows.length);
+for (var i = 0; i < eSrc.cells.length; i ++)
+{
+var c, r;
+r = Math.ceil((i+1) / cols);
+c = (i+1)-((r-1)*cols)
+if (eSrc.cells(i).tagName == 'TH') {
+oExcel.ActiveSheet.Cells(r,c).Font.Bold = true;
+oExcel.ActiveSheet.Cells(r,c).Interior.Color = 14474460;
+}
+if (eSrc.cells(i).childNodes.length > 0 && eSrc.cells(i).childNodes(0).tagName == "B")
+oExcel.ActiveSheet.Cells(r,c).Font.Bold = true;
+oExcel.ActiveSheet.Cells(r,c).Value = eSrc.cells(i).innerText;
+}
+oExcelSheet.Application.Visible = true;
+}
+</script>
+<BODY>
+<FORM id=oForm>
+<TABLE id=idTable cols=3 name=idTable>
+<TR>
+<TH>Titulo 1</TH>
+<TH>Titulo 2</TH>
+<TH>Titulo 3</TH>
+</TR>
+<TR><TD>Celda 1</TD><TD>Celda 5</TD><TD>Celda 5</TD></TR>
+<TR><TD><b>Celda 2</b></TD><TD>Celda 6</TD><TD>Celda 5</TD></TR>
+<TR><TD>Celda 3</TD><TD>Celda 7</TD><TD>Celda 5</TD></TR>
+<TR><TD>Celda 4</TD></TR>
+</TABLE>
+</FORM>
+<INPUT type="button" value="Exportar" id=button1 name=button1 onCLick="exportToXL(oForm.all('idTable'))">
+</BODY>

@@ -1,0 +1,60 @@
+dojo.require("dojox.charting.Chart2D");
+ 
+// Require the theme of our choosing
+//"Claro", new in Dojo 1.6, will be used
+dojo.require("dojox.charting.themes.Claro");
+ 
+ 
+  var pieChart = new dojox.charting.Chart2D("chartNode");
+     
+        // Set the theme
+        pieChart.setTheme(dojox.charting.themes.Claro);
+     
+        // Add the only/default plot 
+        pieChart.addPlot("default", {
+            type: "Pie",
+            radius: 200,
+            fontColor: "black",
+            labelOffset: "-20"
+        });
+     
+        // Add the series of data
+        pieChart.addSeries("January",chartData);
+ 
+        // Render the chart!
+        pieChart.render();
+     
+    });
+</script>
+ 
+<!-- chart will go here -->
+<div id="chartNode" style="width: 550px; height: 550px;"></div>
+ 
+ 
+
+var data = [
+    // This information, presumably, would come from a database or web service
+    // Note that the values for site are either 1 or 2
+    { id: 1, value: 20, site: 1 },
+    { id: 2, value: 16, site: 1 },
+    { id: 3, value: 11, site: 1 },
+    { id: 4, value: 18, site: 1 },
+    { id: 5, value: 26, site: 1 },
+    { id: 6, value: 19, site: 2 },
+    { id: 7, value: 20, site: 2 },
+    { id: 8, value: 28, site: 2 },
+    { id: 9, value: 12, site: 2 },
+    { id: 10, value: 4, site: 2 }
+];
+ 
+// Create the data store
+// Store information in a data store on the client side
+var store = dojo.store.Observable(new dojo.store.Memory({
+    data: {
+        identifier: "id",
+        label: "Users Online",
+        items: data
+    }
+}));
+
+chart.addSeries("y", new dojox.charting.StoreSeries(store, { query: { site: 1 } }, "value"));

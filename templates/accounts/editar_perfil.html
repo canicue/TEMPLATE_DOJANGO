@@ -1,0 +1,18 @@
+{%extends 'accounts/base.html' %}
+{%load i18n%}
+{%block content %}
+<form action="" method="post">
+   datos de user
+    <fieldset>
+    {{ user_form.as_p }}
+    </fieldset>
+
+    datos de perfil
+    <fieldset>
+
+    {{ perfil_form.as_p }}
+    </fieldset>
+    <input type="submit" value="Guardar cambios">
+</form>
+{%endblock%} 
+ 

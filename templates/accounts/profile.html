@@ -1,0 +1,9 @@
+{% extends 'accounts/base.html' %}
+{% block content %}
+<form method='post' action='/accounts/profile/'>
+{{form.as_p}}
+<input type='submit' value='modificar'>
+</form>
+
+{% endblock %}
+ 

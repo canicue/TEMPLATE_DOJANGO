@@ -1,0 +1,74 @@
+
+{% extends "dojango/base_i18n.html" %}
+{%load i18n%}
+{% block dojango_header_extra %}
+
+    
+{%endblock dojango_header_extra %}
+
+{%block dojango_content %}
+{%block layout %}
+	<div id="layoutPrincipal" dojoType="dijit.layout.BorderContainer" design="headline" gutters="true" splitter="true"
+	            doLayout="true">
+		
+{%block top_layout %}	
+<div dojoType="dijit.layout.ContentPane" region="top" id="panelArriba">
+{%block top_content %}
+
+
+	
+			
+			<div dojoType="dijit.MenuBar">
+			<div dojoType="dijit.MenuBarItem">ver
+			<script type="dojo/method" event="onClick">
+	alert("des2");
+			</script>
+			</div>
+			<div dojoType="dijit.MenuBarItem">hola</div>
+			<div dojoType="dijit.MenuBarItem">hola</div>
+			<div dojoType="dijit.MenuBarItem">hola</div>
+			<div dojoType="dijit.MenuBarItem">hola</div>
+			<div dojoType="dijit.MenuBarItem">hola</div>
+			</div>
+			
+			
+
+	{%endblock top_content %}
+	</div>
+{%endblock top_layout %}			
+		
+{%block left_layout %}				
+			
+			<div id="panelIzquierda" dojoType="dijit.layout.ContentPane" region="left" splitter="false" style="width: 240px;">
+			{%block left_content %}
+			{%endblock left_content %}
+			</div>
+{%endblock left_layout%}	
+
+
+{%block right_layout %}				
+			
+			<div id="panelDerecha" dojoType="dijit.layout.ContentPane" region="right" splitter="false" style="width: 240px;">
+			{%block right_content %}
+			{%endblock right_content %}
+			</div>
+{%endblock right_layout%}
+
+
+
+
+
+{%block center_layout %}		
+					
+<div dojoType="dijit.layout.ContentPane" id="panelCentral" region="center">
+{%block center_content %}
+
+{%endblock center_content %}
+
+
+</div>
+{%endblock center_layout %}			
+		</div>	
+        {%endblock layout %}
+{%endblock dojango_content %}
+

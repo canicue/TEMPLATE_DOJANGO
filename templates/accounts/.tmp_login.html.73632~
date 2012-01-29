@@ -1,0 +1,106 @@
+{%extends "desktop/inicio.html"%}
+
+{% block dojango_header_extra %}
+
+
+
+
+<style type="text/css">
+@import "{{ DOJANGO.DIJIT_URL}}/themes/mitundra/mitundra.css";
+
+</style>
+{%include 'lib/blueprint'%}
+<link rel="stylesheet" href="{{DOJANGO.BASE_MEDIA_URL}}/css/magia.css" type="text/css"/>
+<link rel="stylesheet" href="{{DOJANGO.BASE_MEDIA_URL}}/css/base.css" type="text/css"/>
+
+<link rel="stylesheet" href="{{settings.STATIC}}/mentions/twitter/css/main.css" type="text/css"/>
+<link  rel="stylesheet" href="{{DOJANGO.BASE_MEDIA_URL}}/css/graficos.css" type="text/css"/>
+
+<script type="text/javascript" src="{{settings.DOJANGO_LAYERS}}/login_layer.js"></script>
+
+<script type="text/javascript">
+
+	
+	dojo.addOnLoad(function(){
+	dojo.global.WWW_ROOT="{{settings.WWW_ROOT}}";
+	var user="{{request.user}}";
+	
+		});
+			
+	
+	</script>
+
+
+
+
+
+
+
+{%endblock dojango_header_extra %}
+
+
+
+
+
+
+
+{% block dojango_content %}
+{%include "desktop/widgets/cabecera"%}
+<div  class="span-24 barrita" style="background-color:#0048f2;height:25px;width:100%;">
+</div>   
+
+
+
+
+<div dojoType="dojox.widget.Standby" target="login"  jsId="esperadorLogin"></div>
+<div class="container" id="contenedorLogin"> 
+
+<hr class="space"/>
+<hr class="space"/>
+<div id="login" class="lindo" style="top:400px;margin:auto; height:300px;width:520px;" >
+
+<div class="span-15" style="padding:25px;">
+<h2>Login:</h2>
+<form method="post" action="{%url local_apps.accounts.views.login%}">{% csrf_token %} 
+<div class="span-11 redondito" style="background:#ebebeb;">
+<div class="span-5">
+{{form.username}} 
+</div>
+<div class="span-5" style="padding-top:7px;font-size:larger;"><b>User</b></div>
+</div>
+<div class="span-11 redondito" style="background:#ebebeb;">
+<div class="span-5">
+{{form.password}}
+</div>
+<div class="span-5" style="padding-top:7px;font-size:larger;"><b>Password</b></div>
+</div>
+<div class="span-14" >
+<div class="span-4" style="width:140px;">&nbsp;</div>
+<div dojoType="dijit.form.Button" style="margin:auto;" class="mitundra span-4 last" type="submit">login 
+<script type="dojo/connect" event="onClick">
+
+esperadorLogin.show();
+</script>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</form>
+
+</div>
+</div>
+</div>
+<hr class="space"/>
+<hr class="space"/>
+<hr class="space"/>
+<hr class="space"/>
+{%include "desktop/widgets/pie"%}
+{% endblock %}

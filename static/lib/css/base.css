@@ -1,0 +1,401 @@
+body {
+	background: url(../img/testsBodyBg.gif);
+	background:url(../img/testsBodyBg_.gif);
+	background-repeat: repeat-x;
+	margin:0px;
+	padding:0px;
+}
+
+.fondo {
+	xbackground: url(../img/background.jpg);
+	xbackground-repeat: repeat-x;
+}
+
+.redondeado ,.barra{
+	margin-top: 10px;
+	color: #292929;
+/*	width: 300px;*/
+	border: 1px solid #433C3C;
+	/*  background-color: #ddd;*/
+	padding: 10px;
+	margin-left: 10px;
+	margin-bottom: 1em;
+	-o-border-radius: 10px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 10px;
+	-webkit-box-shadow: 0px 3px 7px #adadad;
+	border-radius: 10px;
+	-moz-box-sizing: border-box;
+	-opera-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-khtml-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.interno {
+	margin-left: auto;
+	margin-rigth: auto;
+	/*margin-left:15px;
+    margin-rigth:15px;*/
+	margin-top: 10px;
+	width: 100%;
+	border-color: #0F0000;
+}
+
+div.busqueda {
+	background-color: #E6E6FA;
+	margin-top: 2px;
+	color: #292929;
+	width: 300px;
+	border: 1px solid #FFFFFF;
+	/*  background-color: #ddd;*/
+	padding: 10px;
+	margin-left: 2px;
+	margin-bottom: 1em;
+	-o-border-radius: 10px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 10px;
+	-webkit-box-shadow: 0px 3px 7px #adadad;
+	border-radius: 10px;
+	-moz-box-sizing: border-box;
+	-opera-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-khtml-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.redondito {
+	margin-top: 10px;
+	color: #292929;
+	border: 1px solid #FFFFFF;
+	/*  background-color: #ddd;*/
+	padding: 10px;
+	margin-left: 10px;
+	margin-bottom: 1em;
+	-o-border-radius: 10px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 10px;
+	-webkit-box-shadow: 0px 3px 7px #adadad;
+	border-radius: 10px;
+	-moz-box-sizing: border-box;
+	-opera-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-khtml-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.tooltip {
+	background-color: #FFFFFF;
+}
+
+.boton {
+	background-image: url(../img/btn.png);
+}
+
+
+a.linkUser {
+	font-color: blue;
+	font-size: large;
+}
+
+a.linkSite {
+	color: red;
+	font-size: large;
+}
+
+.suave {
+	border: solid 1px #ddd;
+}
+
+ul {
+	list-style-position: inside;
+}
+
+.oculto {
+	display: none
+}
+
+;
+.visible {
+	display: block
+}
+
+;
+.borde {
+	border: solid 1px;
+}
+
+.dashed {
+	border: dashed 1px;
+}
+
+.lindo {
+	margin-top: 10px;
+	color: #292929;
+	/* width: 300px;*/
+	border: 1px solid #BABABA;
+	background-color:#FBFAFA;/*#FFFFE4;*/
+	/*background-color: #ddd;*/
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-left: 10px;
+	margin-bottom: 1em;
+	-o-border-radius: 10px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 10px;
+	-webkit-box-shadow: 0px 3px 7px #adadad;
+	border-radius: 10px;
+	-moz-box-sizing: border-box;
+	-opera-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-khtml-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+img.favicon {
+	float: left;
+	padding: 0px;
+}
+
+.barra {
+	background: url(../img/boton.png) repeat-x;
+	border:0px;
+	/*padding:3px 3px 3x 3px;*/
+	padding:0px;
+	text-align: center;
+	font-weight: bolder;
+	font-size:x-large;
+	color:#FFFFFF;
+	height:40px;
+}
+.barraAzul
+{
+	padding:1px 0px 0px 0px;
+	text-align: center;
+
+	font-weight: bold;
+	font-size:medium;
+	color:#FFFFFF;
+	height:30px;
+background: url(../img/azul_.png) repeat-x;
+
+}
+
+#logo
+{
+margin:25px;
+
+}
+
+.cosa
+{
+
+text-align:center;
+}
+div.positivo{
+background-color:#c0efe0;
+
+}
+div.negativo{
+background-color:#ffbfbf;
+
+}
+div.neutro
+{
+background-color:#e1e1e1;
+}
+.principal
+{
+height:800px;
+}
+.columna
+{
+
+}
+
+#derecha
+{
+
+margin-left:60px;
+
+}
+#info
+{
+margin-left:30px;
+min-height:300px;
+
+}
+img.favicon
+{
+width:15px;
+height:15px;
+margin:3px;
+}
+.contenedorResultados
+{
+/*
+	border:solid 1px;
+
+
+    margin-top: 10px;
+    color: #292929;
+   
+    border: 1px solid #BABABA;
+    background-color: #ddd;
+    padding: 10px;
+    margin-left: 10px;
+    margin-bottom: 1em;
+    -o-border-radius: 10px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 10px;
+    -webkit-box-shadow: 0px 3px 7px #adadad;
+    border-radius: 10px;
+    -moz-box-sizing: border-box;
+    -opera-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -khtml-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+ 
+*/
+
+}
+.panelRotator
+{
+width:1200px;
+xborder:solid 2px green;
+float:left;
+position:relative;
+}
+.topSites
+{
+
+display:inline;
+list-style-type:none;
+
+}
+li.topsActivos
+{
+list-style-image:url(../img/tabCloseHover.png);
+cursor:hand;
+
+
+}
+
+	.borde
+	{
+		border:solid 1px;
+	}
+
+.div.grafico
+{
+	
+		margin-top: 10px;
+	
+	
+	border: 1px solid #BABABA;
+	
+	
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-left: 10px;
+	margin-bottom: 1em;
+	-o-border-radius: 10px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 10px;
+	-webkit-box-shadow: 0px 3px 7px #adadad;
+	border-radius: 10px;
+	-moz-box-sizing: border-box;
+	-opera-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-khtml-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow: hidden;
+	
+	
+	
+	
+	
+
+width:300px;
+heigth:300px;
+background-color: #fff;
+
+}
+#navMenu{
+	xbackground: url(../img/barrita.png);
+	xbackground:url("../img/boton.png") repeat-x;
+	width:100%;
+	background-color:#0081b3;
+	xbackground-color:#ed1c2f;
+}
+.sorter:hover
+{
+opacity:.7;
+cursor:move;
+
+}
+.pelao
+{
+
+color:blue;
+zbackground:#fff;
+}
+.pelao:hover
+{
+
+cursor: move;
+
+}
+#contenedor,#contenedorLogin
+{
+width:100%;
+height:100%;
+top:0px;
+margin-left:0px;
+margin-top:0px;
+margin-right:0px;
+background:url(../img/testsBodyBg_.gif) transparent;
+background-repeat: repeat-x;
+}
+#busquedasContainer,#busquedaEdit
+{
+background:#fff;
+
+}
+.barrita
+{
+background: url(../img/barrita.png);
+background-repeat: repeat-x;
+
+}
+a.linkHistoric:link,a.linkHistoric:visited
+{
+
+color:blue;
+padding:6px;
+text-decoration: none;
+
+}
+.box3 {
+    background-color: #ddd;
+    width: 210px;
+    height: 30px;
+    padding: 20px;
+    position: absolute;
+    top: 5px; left: 5px;
+
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    behavior: url(/copia/static/mentions/magia/ejemplo.htc);
+}
+#quantumTotal
+{
+background-color: #fff;
+
+}

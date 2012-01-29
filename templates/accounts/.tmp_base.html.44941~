@@ -1,0 +1,47 @@
+{%extends 'admin/base.html'%}
+
+{%load i18n%}
+
+{% block apphead %}
+
+<link rel="stylesheet" type="text/css" href="/buzzcore/static/css/ogilvy.css" />
+<link rel="stylesheet" type="text/css" href="/buzzcore/static/css/buzz.css" />
+
+{% block buzzhead %}
+
+{% endblock %}
+
+{% endblock %}
+
+{% block branding %}
+<img src="/buzzcore/static/images/logo-ogilvy.png">
+{% endblock %}
+
+{% block breadcrumbs %}
+	<div class="breadcrumbs">
+		
+		<a href="{% url local_apps.accounts.views.index %}">{% trans 'Home' %}</a>
+		{% if title %} &rsaquo; {{ title }}{% endif %}
+		
+	</div>
+{% endblock %}
+ 
+{% block content%}
+
+{%endblock%} 
+ 
+{%block footer%}
+<div id="footer">
+&copy; OgilvyBuzz
+</div>
+
+<div id="precarga-imagenes">
+
+	<img src="/buzzcore/static/interfaz/redondeable/no.png">
+	<img src="/buzzcore/static/interfaz/redondeable/ne.png">
+	<img src="/buzzcore/static/interfaz/redondeable/se.png">
+	<img src="/buzzcore/static/interfaz/redondeable/so.png">
+
+</div>
+
+{%endblock%}

@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="ltr">
+    <!--
+    
+     FloatingPane overwrites the ‘style’ attribute of it’s DOM element with the ‘style’ 
+    property provided in the constructor call. This only applies when creating the widget
+     programmatically, since the two style declarations are one and the same when defining
+      the widget declaratively.Always specify position:absolute in the style attribute, 
+      and always specify values for the ‘top’ and ‘left’ CSS attributes. Not doing so will cause FloatingPane 
+      to malfunction. 
+      
+      -->
+    <head>
+        <style type="text/css">
+            body, html { font-family:helvetica,arial,sans-serif; font-size:90%; }
+        </style>
+        <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.6/dojo/dojo.xd.js"
+        djConfig="parseOnLoad: true">
+        </script>
+        <script type="text/javascript">
+            dojo.require("dojox.layout.FloatingPane");
+            dojo.require("dijit.form.Button");
+        </script>
+        <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/dojo/1.6/dijit/themes/claro/claro.css"
+        />
+        <style type="text/css">
+            @import "http://ajax.googleapis.com/ajax/libs/dojo/1.6/dojox/layout/resources/FloatingPane.css";
+            @import "http://ajax.googleapis.com/ajax/libs/dojo/1.6/dojox/layout/resources/ResizeHandle.css";
+        </style>
+    </head>
+    
+    <body class=" claro ">
+        <div dojoType="dojox.layout.FloatingPane" id="dFloatingPane" title="A floating pane"
+        resizable="true" dockable="true" style="position:absolute;top:0;left:0;width:100px;height:100px;visibility:hidden;"
+        
+        
+        >
+            This is the content of the pane!
+        </div>
+        <div dojoType="dijit.form.Button" label="Show me" onClick="dijit.byId('dFloatingPane').show();">
+        </div>
+        <!-- make campus preview div big enough: -->
+        <div style="height:280px;width:100%;">
+        </div>
+       
+    </body>
+
+</html>

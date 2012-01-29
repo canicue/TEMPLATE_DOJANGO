@@ -1,0 +1,10 @@
+{%extends 'accounts/base.html'%}
+{%load i18n%}
+{%block content %}
+<h1>crear perfil</h1>
+<form method='post' action='.'>
+{{form.as_p}}
+<input type='submit' value='enviar'>
+</form>
+{%endblock%}
+ 

@@ -1,0 +1,1 @@
+str.replace(/^\w/, function($0) { return $0.toUpperCase(); }); 
